@@ -1,0 +1,20 @@
+- hosts: neiwang
+  gather_facts: false
+  user: root
+
+  tasks:
+       - name: "增加执行权限"
+         file:
+          path: /etc/rc.d/rc.local
+          mode: '0755'
+
+       - name: "设置supervisor开机启动"
+         blockinfile:
+          path: /etc/rc.d/rc.local
+          block: |
+            /usr/bin/python2 /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+            /usr/sbin/ntpdate asia.pool.ntp.org
+   
+hosts文件内容
+[neiwang]
+0.109 ansible_ssh_host=192.168.0.109 ansible_ssh_user=root ansible_ssh_pass=1 ansible_ssh_port=22
