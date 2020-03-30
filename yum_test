@@ -1,0 +1,6 @@
+从本地内网安装rpm包
+- name: "安装jdk-8u191-linux-x64.rpm"
+  yum: name=http://172.31.67.3/jdk-8u191-linux-x64.rpm state=installed
+
+参考:
+https://docs.ansible.com/ansible/latest/modules/yum_module.html#yum-module
