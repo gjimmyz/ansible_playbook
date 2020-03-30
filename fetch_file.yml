@@ -1,0 +1,23 @@
+- hosts: neiwang
+  gather_facts: false
+  user: root
+  vars:
+       curr_date: "{{ lookup('pipe','date +%Y%m%d') }}"
+
+  tasks:
+       - name: find files
+         find:
+          paths: /root/scripts/{{curr_date}}
+          patterns: "*"
+          recurse: no
+         register: file_fetch
+
+       - name: fetch files
+         fetch:
+          src: "{{ item.path }}"
+          dest: /root/scripts/log/
+          flat: yes
+         with_items: "{{ file_fetch.files }}"
+
+参考:
+https://docs.ansible.com/ansible/latest/modules/fetch_module.html#fetch-module
