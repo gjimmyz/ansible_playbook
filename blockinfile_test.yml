@@ -38,3 +38,6 @@ touch /var/lock/subsys/local
 /usr/bin/python2 /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
 /usr/sbin/ntpdate asia.pool.ntp.org
 # END ANSIBLE MANAGED BLOCK
+
+参考:
+https://docs.ansible.com/ansible/latest/modules/blockinfile_module.html#blockinfile-module
