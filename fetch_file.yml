@@ -21,3 +21,5 @@
 
 参考:
 https://docs.ansible.com/ansible/latest/modules/fetch_module.html#fetch-module
+插件:
+https://docs.ansible.com/ansible/latest/plugins/lookup/pipe.html
