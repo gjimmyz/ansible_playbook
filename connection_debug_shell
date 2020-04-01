@@ -1,4 +1,4 @@
-[root@localhost ansible]# cat init.yml 
+[root@localhost ansible]# cat ssh_key.yml
 - name: "给远程机器添加ssh_key"
   hosts: "neiwang"
   gather_facts: false
@@ -28,7 +28,7 @@ hosts文件
 192.168.0.111 ansible_ssh_host=192.168.0.111 ansible_ssh_user=root ansible_ssh_pass=2 ansible_ssh_port=22
 192.168.0.112 ansible_ssh_host=192.168.0.112 ansible_ssh_user=root ansible_ssh_pass=2 ansible_ssh_port=22
 效果:
-[root@localhost ansible]# ansible-playbook init.yml 
+[root@localhost ansible]# ansible-playbook ssh_key.yml 
 
 PLAY [给远程机器添加ssh_key] ******************************************************************************************************************************
 
@@ -77,3 +77,5 @@ total 12
 -rw------- 1 root root 1675 Mar 31 21:48 id_rsa
 -rw-r--r-- 1 root root  408 Mar 31 21:48 id_rsa.pub
 -rw-r--r-- 1 root root 1995 Mar 31 22:25 known_hosts
+配置文件 认证地方需要修改
+host_key_checking = False
