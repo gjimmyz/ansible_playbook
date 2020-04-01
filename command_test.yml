@@ -1,9 +1,0 @@
-- name: "重启机器"
-  command: /sbin/shutdown -r +1
-  async: 0
-  poll: 0
-  changed_when : false
-  ignore_errors: true
-  
-参考:
-https://docs.ansible.com/ansible/latest/modules/command_module.html#command-module
