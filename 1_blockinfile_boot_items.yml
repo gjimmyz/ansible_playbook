@@ -19,7 +19,7 @@
           block: |
             sleep 5
    
-hosts文件内容
+配置文件:
 [neiwang]
 192.168.0.109 ansible_ssh_host=192.168.0.109 ansible_ssh_user=root ansible_ssh_pass=2 ansible_ssh_port=22
 192.168.0.111 ansible_ssh_host=192.168.0.111 ansible_ssh_user=root ansible_ssh_pass=2 ansible_ssh_port=22
