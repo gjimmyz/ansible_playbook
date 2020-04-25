@@ -21,7 +21,7 @@
          changed_when : false
          ignore_errors: true
        
-hosts文件:
+配置文件:
 [neiwang]
 192.168.0.109 ansible_ssh_host=192.168.0.109 ansible_ssh_user=root ansible_ssh_pass=2 ansible_ssh_port=22
 192.168.0.111 ansible_ssh_host=192.168.0.111 ansible_ssh_user=root ansible_ssh_pass=2 ansible_ssh_port=22
@@ -29,7 +29,7 @@ hosts文件:
 [neiwang_test]
 192.168.0.109 ansible_ssh_host=192.168.0.109 ansible_ssh_user=root ansible_ssh_pass=2 ansible_ssh_port=22
 
-效果:
+执行:
 [root@localhost ansible]# ansible-playbook command_reboot_yml 
 
 PLAY [重启机器] ****************************************************************************************************************************************
