@@ -6,7 +6,7 @@
 
 4、yum_installsoftware.yml      yum 使用yum安装jdk包
 
-5、
+5、lineinfile_sudo.yml          lineinfile 添加用户到sudo文件
 
 6、
 
