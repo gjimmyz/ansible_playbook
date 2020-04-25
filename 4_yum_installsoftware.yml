@@ -14,7 +14,16 @@
             name: http://192.168.0.107/jdk-8u241-linux-x64.rpm
             state: installed
 
-效果:
+配置文件:
+[root@localhost ansible]# cat hosts 
+[neiwang]
+192.168.0.109 ansible_ssh_host=192.168.0.109 ansible_ssh_user=root ansible_ssh_pass=2 ansible_ssh_port=22
+192.168.0.111 ansible_ssh_host=192.168.0.111 ansible_ssh_user=root ansible_ssh_pass=2 ansible_ssh_port=22
+192.168.0.112 ansible_ssh_host=192.168.0.112 ansible_ssh_user=root ansible_ssh_pass=2 ansible_ssh_port=22
+[neiwang_test]
+192.168.0.109 ansible_ssh_host=192.168.0.109 ansible_ssh_user=root ansible_ssh_pass=2 ansible_ssh_port=22
+
+执行:
 [root@localhost ansible]# ansible-playbook yum_installsoftware.yml
 
 PLAY [使用yum安装jdk包] *********************************************************************************************************************************
@@ -30,6 +39,7 @@ changed: [192.168.0.109]
 PLAY RECAP *****************************************************************************************************************************************
 192.168.0.109              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0  
 
+效果:
 root@192.168.0.109:~# java -version
 java version "1.8.0_241"
 Java(TM) SE Runtime Environment (build 1.8.0_241-b07)
