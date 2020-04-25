@@ -1,9 +1,19 @@
-[root@localhost ansible]# ansible --version
-ansible 2.9.6
-  config file = /etc/ansible/ansible.cfg
-  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
-  ansible python module location = /usr/lib/python2.7/site-packages/ansible
-  executable location = /usr/bin/ansible
-  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
-[root@localhost ansible]# python -V
-Python 2.7.5
+1、blockinfile_boot_items.yml   blockinfile模块 设置开机启动
+
+2、command_when_reboot.yml      command when 重启机器
+
+3、connection_ssh_key.yml       connection 给远程机器添加ssh_key
+
+4、yum_installsoftware.yml      yum 使用yum安装jdk包
+
+5、
+
+6、
+
+7、
+
+8、
+
+9、
+
+10、
