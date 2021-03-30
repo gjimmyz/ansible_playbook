@@ -8,9 +8,9 @@
 
 5、lineinfile_sudo.yml          ------lineinfile 添加用户到sudo文件
 
-6、
+6、hp硬盘raid检查
 
-7、
+7、dell硬盘raid检查
 
 8、
 
