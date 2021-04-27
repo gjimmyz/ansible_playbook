@@ -1,0 +1,22 @@
+#!/bin/bash
+#--------------------------------------------------
+#Author:gongzheng
+#Email:gong_zheng@mingmatechs.com
+#FileName:ansible_cmdb.sh
+#Function:
+#Version:1.0
+#Created:2020-12-13
+#--------------------------------------------------
+LANG=en_US.UTF-8
+LC_ALL=en_US.UTF-8
+PATH=$PATH:/usr/local/bin:/usr/bin:/usr/sbin
+currdate=$(date +%Y%m%d)
+
+[[ -d /etc/ansible/out ]] || mkdir -pv /etc/ansible/out/${currdate}
+cd /etc/ansible && ansible -i save_hosts dell_disk -m setup --tree out/${currdate}
+cd /etc/ansible && ansible -i save_hosts hp_disk -m setup --tree out/${currdate}
+cd /etc/ansible && ansible -i save_hosts lenovo_disk -m setup --tree out/${currdate}
+cd /etc/ansible && ansible -i save_hosts vm_disk -m setup --tree out/${currdate}
+
+cd /etc/ansible/out && ansible-cmdb ${currdate} > index.html
+cd /etc/ansible/out && scp index.html 10.81.110.76:/var/www/html
