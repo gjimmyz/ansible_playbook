@@ -16,4 +16,4 @@
 
 9、fetch_file.yml 从各个节点上拉取批量日志到中心机
 
-10、
+10、https://github.com/fboender/ansible-cmdb 简单资产信息
